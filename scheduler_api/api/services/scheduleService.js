@@ -4,13 +4,7 @@ const Schedule = require('../entities/Schedule');
 const crypto = require('crypto');
 
 function generateSchedule(camp_id, start_time, name) {
-    var activities;
-    
-    try {
-        activities = db.getCampActivities(camp_id);
-    } catch(err) {
-        throw Error('Generate Schedule Failed: ' + err);
-    }
+    var activities = db.getCampActivities(camp_id);
 
     const schedule_id = crypto.randomUUID();
 

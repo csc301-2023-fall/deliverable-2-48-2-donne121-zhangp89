@@ -2,6 +2,13 @@ const scheduleService = require('../controllers/scheduleController');
 
 module.exports = (app) => {
     app.post('/schedule/generate/', (req, res) => {
-        res.send(scheduleService.generateSchedule(req, res));
+        var result;
+        try {
+            result = scheduleService.generateSchedule(req, res)
+        } catch(err) {
+            console.log(err.message);
+            res.status(500).send({error: err.message});
+        }
+        res.send(result);
     });
 };

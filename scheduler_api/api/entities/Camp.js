@@ -29,7 +29,7 @@ module.exports = class Camp {
      * @returns true if student is added, false if the set is full.
      */
     addStudents(newStudent) {
-        if (this.students.size() == Camp.CAMP_MAX_STUDENT)
+        if (this.students.size == Camp.CAMP_MAX_STUDENT)
             return false;
         this.students.add(newStudent);
         return true;
@@ -38,7 +38,7 @@ module.exports = class Camp {
      * @returns number of counselors in this camp.
      */
     numCounselors() {
-        return this.counselors.size();
+        return this.counselors.size;
     }
     /**
      * Add a counselor object into the set (with size < CAMP_MAX_COUNSELOR).
@@ -47,7 +47,7 @@ module.exports = class Camp {
      * @returns true if counselor is added, false if the set is full.
      */
     addCounselor(newCounselor) {
-        if (this.counselors.size() == Camp.CAMP_MAX_COUNSELOR)
+        if (this.counselors.size == Camp.CAMP_MAX_COUNSELOR)
             return false;
         this.counselors.add(newCounselor);
         return true;

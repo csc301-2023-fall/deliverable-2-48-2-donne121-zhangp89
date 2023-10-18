@@ -1,4 +1,5 @@
 const Activity = require("../entities/Activity");
+const Camp = require("../entities/Camp");
 
 function getCampActivities(camp_id) {
     return [
@@ -33,7 +34,12 @@ function submitSchedule(schedule) {
     return true;
 }
 
+function getCampById(camp_id) {
+    return new Camp(1, camp_id);
+}
+
 module.exports = {
     getCampActivities,
-    submitSchedule
+    submitSchedule,
+    getCampById
 }

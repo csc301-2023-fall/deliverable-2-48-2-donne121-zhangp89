@@ -24,5 +24,6 @@ app.use((req, res, next) => {
 });
 
 require('./api/routes/scheduleRoutes')(app);
+require('./api/routes/campRoutes')(app);
 
 module.exports = app;

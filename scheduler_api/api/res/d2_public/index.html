@@ -30,7 +30,7 @@ No response yet...
     function generateSchedule() {
         var xhttp = new XMLHttpRequest();
         var body = document.getElementById("generateScheduleInput").value;
-        xhttp.open("POST", "http://localhost:5000/schedule/generate");
+        xhttp.open("POST", "http://ec2-13-59-187-237.us-east-2.compute.amazonaws.com:5000/schedule/generate");
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhttp.send(body);
         xhttp.onreadystatechange = function() {

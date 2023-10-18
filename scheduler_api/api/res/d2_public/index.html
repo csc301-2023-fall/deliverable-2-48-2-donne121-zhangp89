@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Group 48 Subteam #2</h1>
+<h2>Deliverable 2 Demo</h2>
+<h2>Backend Scheduler API: Generate Schedule Use Case</h2>
+
+<h3>Generate Schedule Request</h3>
+
+<h4> Request Body JSON:</h4>
+<textarea id="generateScheduleInput" name="generateScheduleInput" rows="4" cols="50">
+{
+    "camp_id": "f307479d-262e-423a-a681-a043c2577b0b",
+    "start_time": "01/01/1970 11:40:0:0",
+    "name": "My Wee Schedule"
+}
+</textarea>
+<br/>
+<br/>
+<button type="button" onclick="generateSchedule()">Send Request</button>
+<br/>
+<h4> Response JSON:</h4>
+<textarea id="generateScheduleOutput" name="generateScheduleOutput" rows="4" cols="50">
+No response yet...
+</textarea>
+<script>
+function generateSchedule() {
+  var xhttp = new XMLHttpRequest();
+  var body = document.getElementById("generateScheduleInput").textContent;
+  xhttp.open("POST", "http://localhost:5000/schedule/generate");
+  xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhttp.send(body);
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == XMLHttpRequest.DONE) {
+        document.getElementById("generateScheduleOutput").innerHTML = xhttp.responseText;
+        }
+    }
+}
+</script>
+
+</body>
+</html>
+

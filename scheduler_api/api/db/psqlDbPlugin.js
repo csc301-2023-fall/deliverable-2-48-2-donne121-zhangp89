@@ -2,6 +2,10 @@ const Activity = require("../entities/Activity");
 const Camp = require("../entities/Camp");
 
 function getCampActivities(camp_id) {
+    // For testing error handling of non-existant camp
+    if (camp_id != "f307479d-262e-423a-a681-a043c2577b0b") {
+        throw Error("camp_id does not exist");
+    }
     return [
         new Activity(camp_id,
                     '1',
@@ -35,6 +39,10 @@ function submitSchedule(schedule) {
 }
 
 function getCampById(camp_id) {
+    // For testing error handling of non-existant camp
+    if (camp_id != "f307479d-262e-423a-a681-a043c2577b0b") {
+        throw Error("camp_id does not exist");
+    }
     return new Camp(1, camp_id);
 }
 

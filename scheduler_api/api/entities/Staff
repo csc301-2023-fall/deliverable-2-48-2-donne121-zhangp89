@@ -6,13 +6,13 @@ module.exports = class Staff {
     /**
      * Create a new staff profile.
      * 
-     * @param {number} sID - The unique ID of this staff.
+     * @param {number} stID - The unique ID of this staff.
      * @param {string} lastname
      * @param {string} firstname
      * @param {number} campusID - The ID of the campus this staff registers.
      */
-    constructor (sID, lastname, firstname, campusID) {
-        this.sID = sID;
+    constructor (stID, lastname, firstname, campusID) {
+        this.stID = stID;
         this.lastname = lastname;
         this.firstname = firstname;
         this.campusID = campusID;
@@ -22,21 +22,21 @@ module.exports = class Staff {
     /**
     * Dummy database used for testing.
     */
-    staffs = [
+    static staffs = [
         {
-            sID: "ST00001",
+            stID: "ST00001",
             lastname: "Dummy",
             firstname: "Staff 1",
             campusID: "C0001"
         },
         {
-            sID: "ST00002",
+            stID: "ST00002",
             lastname: "Dummy",
             firstname: "Staff 2",
             campusID: "C0001"
         },
         {
-            sID: "ST00004",
+            stID: "ST00004",
             lastname: "Dummy",
             firstname: "Staff 4",
             campusID: "C0001"

@@ -6,13 +6,13 @@ module.exports = class Counselor {
     /**
      * Create a new counselor profile.
      * 
-     * @param {number} sID - The unique ID of this counselor.
+     * @param {number} cID - The unique ID of this counselor.
      * @param {string} lastname
      * @param {string} firstname
      * @param {number} campusID - The ID of the campus this counselor registers.
      */
-    constructor (sID, lastname, firstname, campusID) {
-        this.sID = sID;
+    constructor (cID, lastname, firstname, campusID) {
+        this.cID = cID;
         this.lastname = lastname;
         this.firstname = firstname;
         this.campusID = campusID;
@@ -22,21 +22,21 @@ module.exports = class Counselor {
     /**
      * Dummy database used for testing.
      */
-    counselors = [
+    static counselors = [
         {
-            sID: "co00001",
+            cID: "co00001",
             lastname: "Dummy",
             firstname: "Counselor 1",
             campusID: "C0001"
         },
         {
-            sID: "co00002",
+            cID: "co00002",
             lastname: "Dummy",
             firstname: "Counselor 2",
             campusID: "C0001"
         },
         {
-            sID: "co00004",
+            cID: "co00004",
             lastname: "Dummy",
             firstname: "Counselor 4",
             campusID: "C0001"

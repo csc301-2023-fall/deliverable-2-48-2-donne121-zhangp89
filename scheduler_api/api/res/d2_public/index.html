@@ -27,7 +27,7 @@ No response yet...
 <script>
 function generateSchedule() {
   var xhttp = new XMLHttpRequest();
-  var body = document.getElementById("generateScheduleInput").textContent;
+  var body = document.getElementById("generateScheduleInput").value;
   xhttp.open("POST", "http://localhost:5000/schedule/generate");
   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhttp.send(body);

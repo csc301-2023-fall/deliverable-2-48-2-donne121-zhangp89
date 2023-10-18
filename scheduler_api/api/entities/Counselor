@@ -1,0 +1,45 @@
+/**
+ * Class representing a counselor profile.
+ */
+module.exports = class Counselor {
+
+    /**
+     * Create a new counselor profile.
+     * 
+     * @param {number} sID - The unique ID of this counselor.
+     * @param {string} lastname
+     * @param {string} firstname
+     * @param {number} campusID - The ID of the campus this counselor registers.
+     */
+    constructor (sID, lastname, firstname, campusID) {
+        this.sID = sID;
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.campusID = campusID;
+    }
+
+    
+    /**
+     * Dummy database used for testing.
+     */
+    counselors = [
+        {
+            sID: "co00001",
+            lastname: "Dummy",
+            firstname: "Counselor 1",
+            campusID: "C0001"
+        },
+        {
+            sID: "co00002",
+            lastname: "Dummy",
+            firstname: "Counselor 2",
+            campusID: "C0001"
+        },
+        {
+            sID: "co00004",
+            lastname: "Dummy",
+            firstname: "Counselor 4",
+            campusID: "C0001"
+        }
+    ];
+}

@@ -46,8 +46,22 @@ function getCampById(camp_id) {
     return new Camp(1, camp_id);
 }
 
+function checkLogin(username, password) {
+    if (username == "UserName" && password == "123456")
+        return true;
+    return false;
+}
+
+function existsUser(username) {
+    if (username == "UserName")
+        return true;
+    return false;
+}
+
 module.exports = {
     getCampActivities,
     submitSchedule,
-    getCampById
+    getCampById,
+    checkLogin,
+    existsUser
 }

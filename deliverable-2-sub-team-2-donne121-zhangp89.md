@@ -14,7 +14,7 @@ We loosely followed a CLEAN service-based architecture for the backend API. API 
 
 ### Individual Contributions
 - Harvey Donnelly planned the backend architecture and implemented the Express.JS server (i.e. the scaffolding for the API workflow). He implemented the generateSchedule API call and the related entities: Schedule, ScheduleBlock and Activity. He also wrote Mocha unit tests for this API call. Harvey developed the interactive frontend demo and was responsible for deploying the Scheduler API on the AWS EC2 instance. He was also responsible for writing the instructions and summary of decisions and options sections of the deliverable report.
-- Peifeng Zhang wrote all other entities related to campus and people profile that will be used later. He implemented API call about user account: login, signup, and logout. He also wrote Mocha unit tests for all entities. He also wrote part of the group report.
+- Peifeng Zhang wrote all other entities related to campus and people profile that will be used later. He implemented API call about getting camp and user account: login, signup, and logout. He also wrote Mocha unit tests for all entities. He also wrote part of the group report.
 
 ### Instructions
 #### Deployed Application

@@ -6,7 +6,6 @@ module.exports = (app) => {
         try {
             result = scheduleService.generateSchedule(req, res)
         } catch(err) {
-            console.log(err.message);
             res.status(500).send({error: err.message});
         }
         res.send(result);

@@ -20,7 +20,7 @@ function generateSchedule(camp_id, start_time, name) {
         new_schedule.addScheduleBlock(curr_activity);
     }
 
-    if (db.submitSchedule(new_schedule) == false) throw Error("DB Connection failed");
+    if (db.submitSchedule(new_schedule) == false) throw Error("DB Submission failed");
 
     return new_schedule;
 

@@ -4,17 +4,19 @@ const db = require('../../db/psqlDbPlugin');
 
 describe('scheduleService', function () {
 	describe('generateSchedule()', function () {
-		it('should return \'camp_id does not exist\' for invalid camp_id', () => {
-			var result = 'Nothing';
-			try {
-				result = scheduleService.generateSchedule(
-				'Invalid_Camp_ID',
-				new Date('2024-01-01T09:30:00.000Z'),
-				'Test');
-			} catch(err) {
-				assert.equal(err.message, "camp_id does not exist");
-			}
-			assert.equal(result, 'Nothing');
+		describe('Failed Schedule Generation', () => {
+			it('should return \'camp_id does not exist\' for invalid camp_id', () => {
+				var result = 'Nothing';
+				try {
+					result = scheduleService.generateSchedule(
+					'Invalid_Camp_ID',
+					new Date('2024-01-01T09:30:00.000Z'),
+					'Test');
+				} catch(err) {
+					assert.equal(err.message, "camp_id does not exist");
+				}
+				assert.equal(result, 'Nothing');
+			});
 		});
 		describe('Successful Schedule Generation', () => {
 			var result = 'Nothing';
